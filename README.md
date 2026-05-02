@@ -12,7 +12,7 @@ Valuta is a modern, real-time chat application designed for seamless communicati
 
 ## 🛠 Tech Stack
 
-- **Frontend:** [Next.js 15](https://nextjs.org/) (App Router), TypeScript, Tailwind CSS, Shadcn UI.
+- **Frontend:** [Next.js 16](https://nextjs.org/) (App Router), TypeScript, Tailwind CSS, Shadcn UI.
 - **Backend:** [F# .NET 10](https://dotnet.microsoft.com/en-us/languages/fsharp), ASP.NET Core.
 - **Orchestration:** Docker Compose.
 
