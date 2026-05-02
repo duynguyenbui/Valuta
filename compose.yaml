@@ -1,0 +1,22 @@
+services:
+  api:
+    image: valuta-api
+    build:
+      context: .
+      dockerfile: Valuta.Api/Dockerfile
+    ports:
+      - "5235:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  web-app:
+    image: valuta-web-app
+    build:
+      context: ./valuta-web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5235
+    depends_on:
+      - api

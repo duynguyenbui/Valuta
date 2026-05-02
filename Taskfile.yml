@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  api:
+    desc: Run the F# API
+    cmds:
+      - dotnet run --project Valuta.Api/Valuta.Api.fsproj
+
+  web:
+    desc: Run the Next.js Web App
+    cmds:
+      - pnpm --dir valuta-web dev
+
+  dev:
+    desc: Run both API and Web App
+    deps: [api, web]
+
+  install:
+    desc: Install dependencies for both projects
+    cmds:
+      - dotnet restore
+      - pnpm --dir valuta-web install
